@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Three.js Interactive Scene</title>
+    <link rel="stylesheet" href="./css/font.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div id="container"></div>
+    <div class="section text-1">
+      <header class="header">
+        <div class="header__left_block">
+          <div class="logo"><img src="./images/logo.png" alt="" /></div>
+          <div class="line"></div>
+          <div class="date"><span>Friday July 8th</span></div>
+        </div>
+        <div class="header__right_block">
+          <div class="search">
+            <button>
+              <svg
+                width="43"
+                height="43"
+                viewBox="0 0 43 43"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M29.249 26.6941L38.8881 36.3332C39.2269 36.6723 39.4172 37.132 39.417 37.6113C39.4169 38.0906 39.2263 38.5502 38.8872 38.889C38.5482 39.2278 38.0885 39.4181 37.6092 39.4179C37.1298 39.4177 36.6702 39.2272 36.3314 38.8881L26.6923 29.249C23.8107 31.4808 20.1872 32.5311 16.5588 32.1861C12.9304 31.8412 9.56972 30.1269 7.16038 27.3921C4.75104 24.6573 3.47404 21.1073 3.58918 17.4644C3.70431 13.8214 5.20293 10.3592 7.78016 7.78194C10.3574 5.20471 13.8196 3.7061 17.4626 3.59096C21.1055 3.47583 24.6555 4.75282 27.3903 7.16217C30.1252 9.57151 31.8394 12.9322 32.1844 16.5606C32.5293 20.189 31.479 23.8125 29.2472 26.6941H29.249ZM17.9167 28.6667C20.7678 28.6667 23.5021 27.5341 25.5181 25.5181C27.5341 23.5021 28.6667 20.7678 28.6667 17.9167C28.6667 15.0656 27.5341 12.3313 25.5181 10.3153C23.5021 8.29926 20.7678 7.16668 17.9167 7.16668C15.0656 7.16668 12.3313 8.29926 10.3153 10.3153C8.29927 12.3313 7.16668 15.0656 7.16668 17.9167C7.16668 20.7678 8.29927 23.5021 10.3153 25.5181C12.3313 27.5341 15.0656 28.6667 17.9167 28.6667Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="profile">
+            <a href="#"> <img src="./images/people.png" alt="" /></a>
+          </div>
+        </div>
+      </header>
+      <div class="main">
+        <div class="main__top_text">
+          <p>Drama</p>
+          <span></span>
+          <p>Thriller</p>
+          <span></span>
+          <p>Supernatural</p>
+        </div>
+        <div class="main__text">
+          <h1 class="fade-in">Stranger Things</h1>
+        </div>
+        <div class="main__text_subtitle">
+          <p>2019</p>
+          <span class="line"></span>
+          <p>DIRECTOR: <span class="silver__text">Shawn Levy </span></p>
+          <span class="line"></span>
+          <p>seasons: <span class="silver__text">3 (5 Episodes)</span></p>
+        </div>
+        <div class="main__text_desc">
+          <p class="fade-in">
+            In 1980s Indiana, a group of young friends witness supernatural
+            forces and secret government exploits. As they search for answers,
+            the children <br />
+            unravel a series of extraordinary mysteries.
+          </p>
+        </div>
+        <div class="main__stars">
+          <span class="fade-in-stars svg-icon active"> </span>
+          <span class="fade-in-stars svg-icon active"> </span>
+          <span class="fade-in-stars svg-icon active"> </span>
+          <span class="fade-in-stars svg-icon transp"> </span>
+          <span class="fade-in-stars svg-icon transp"> </span>
+        </div>
+        <div class="main__btns">
+          <button class="stream__btn">
+            <span>STREAM NOW</span
+            ><svg
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16 2C8.26875 2 2 8.26875 2 16C2 23.7313 8.26875 30 16 30C23.7313 30 30 23.7313 30 16C30 8.26875 23.7313 2 16 2ZM20.5031 16.2156L13.6781 21.1812C13.6407 21.2081 13.5966 21.2242 13.5507 21.2276C13.5047 21.2311 13.4587 21.2218 13.4177 21.2008C13.3767 21.1798 13.3422 21.1479 13.3182 21.1087C13.2941 21.0694 13.2813 21.0242 13.2812 20.9781V11.0531C13.2811 11.007 13.2937 10.9616 13.3178 10.9222C13.3418 10.8828 13.3762 10.8508 13.4173 10.8298C13.4584 10.8087 13.5046 10.7995 13.5506 10.8031C13.5966 10.8066 13.6408 10.8229 13.6781 10.85L20.5031 15.8125C20.5354 15.8353 20.5617 15.8655 20.5798 15.9006C20.598 15.9357 20.6075 15.9746 20.6075 16.0141C20.6075 16.0536 20.598 16.0925 20.5798 16.1275C20.5617 16.1626 20.5354 16.1928 20.5031 16.2156Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+          <button class="episodes__btn">ALL EPISODES</button>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="swiper mySwiper">
+          <h3>POPULAR THIS WEEK</h3>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide">
+              <img src="./images/films/6.jpeg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/films/6.jpeg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/films/6.jpeg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/films/5.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/films/4.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/films/3.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/films/2.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/films/1.png" alt="" />
+            </div>
+          </div>
+          <div class="swiper-button-next">
+            <svg
+              width="10"
+              height="17"
+              viewBox="0 0 12 19"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.5959 0.787498L0.548462 2.83494L7.199 9.5L0.548462 16.1651L2.5959 18.2125L11.3084 9.5L2.5959 0.787498Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <div class="swiper-button-prev">
+            <svg
+              width="10"
+              height="17"
+              viewBox="0 0 12 19"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.5959 0.787498L0.548462 2.83494L7.199 9.5L0.548462 16.1651L2.5959 18.2125L11.3084 9.5L2.5959 0.787498Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.from(".fade-in", { opacity: 0, y: 50, duration: 1 });
+        gsap.from(".fade-in-stars", {
+          opacity: 0,
+          x: -50,
+          duration: 1,
+          stagger: 0.3,
+        });
+      });
+    </script>
+
+    <script src="./js/date.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+    <script src="./js/fon.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/stars.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 6,
+        spaceBetween: 40,
+        navigation: {
+          nextEl: ".swiper-button-prev",
+          prevEl: ".swiper-button-next",
+        },
+        initialSlide:
+          document.querySelectorAll(".mySwiper .swiper-slide").length - 1,
+      });
+    </script>
+  </body>
+</html>

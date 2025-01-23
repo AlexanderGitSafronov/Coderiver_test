@@ -20,6 +20,10 @@
   </head>
   <body>
     <div id="container"></div>
+    <div class="overlay"></div>
+    <div class="search-bar">
+      <input type="text" placeholder="Поиск..." />
+    </div>
     <div class="section text-1">
       <header class="header">
         <div class="header__left_block">
@@ -168,7 +172,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        gsap.from(".fade-in", { opacity: 0, y: 50, duration: 1 });
+        gsap.from(".fade-in", { opacity: 0, y: 50, duration: 2 });
         gsap.from(".fade-in-stars", {
           opacity: 0,
           x: -50,
@@ -179,6 +183,7 @@
     </script>
 
     <script src="./js/date.js"></script>
+    <script src="./js/search.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
     <script src="./js/fon.js"></script>
     <script src="./js/main.js"></script>
@@ -193,6 +198,28 @@
         navigation: {
           nextEl: ".swiper-button-prev",
           prevEl: ".swiper-button-next",
+        },
+        on: {
+          slideChangeTransitionStart: function () {
+            const slides = Array.from(
+              document.querySelectorAll(".swiper-slide")
+            );
+
+            slides.forEach((slide) => {
+              slide.classList.remove("flip");
+              void slide.offsetWidth;
+            });
+
+            slides.reverse().forEach((slide, index) => {
+              setTimeout(() => {
+                slide.classList.add("flip");
+
+                setTimeout(() => {
+                  slide.classList.remove("flip");
+                }, 1000);
+              }, index * 150);
+            });
+          },
         },
         initialSlide:
           document.querySelectorAll(".mySwiper .swiper-slide").length - 1,

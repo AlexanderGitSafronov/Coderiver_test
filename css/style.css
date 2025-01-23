@@ -49,7 +49,6 @@ button {
 }
 .text-visible {
   opacity: 1;
-  /* transform: translate(-50%, 0); */
 }
 
 .section {
@@ -83,6 +82,58 @@ button {
   color: rgba(200, 200, 200, 1);
   font-size: 24px;
   font-family: "KyivTypeTitling", sans-serif;
+}
+.search button {
+  cursor: pointer;
+}
+
+.search button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+
+.search-bar {
+  position: fixed;
+  top: -100px;
+  left: 0;
+  right: 0;
+  background: #333;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: top 0.3s ease;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input {
+  width: 50%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 8;
+}
+
+.search-bar.show {
+  top: 0;
+}
+
+.overlay.show {
+  display: block;
 }
 
 .main {
@@ -145,10 +196,13 @@ button {
 .main__stars svg path {
   transition: fill 0.3s ease;
 }
+.main__stars svg {
+  max-width: 29px;
+}
 
 .main__stars span:hover svg path,
 .main__stars span:hover svg {
-  fill: yellow; /* Цвет при наведении */
+  fill: yellow;
 }
 
 .main__btns {
@@ -170,17 +224,14 @@ button {
 }
 .stream__btn {
   column-gap: 15px;
-
   background-color: rgba(212, 13, 31, 1);
 }
 .episodes__btn {
   border: 3px solid #fff;
 }
-
 .footer {
   margin: 55px 0 50px;
 }
-
 .swiper {
   max-width: 1075px;
   left: -90px;
@@ -188,7 +239,6 @@ button {
   margin: 0px;
   padding-top: 10px;
 }
-
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -196,12 +246,11 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  transform: rotateY(0deg) !important;
   width: 145px !important;
   background-color: transparent;
   height: 210px !important;
 }
-
 .swiper-slide img {
   display: block;
   width: 150px !important;
@@ -245,4 +294,9 @@ button {
   margin-bottom: 32px !important;
   font-weight: 800;
   font-size: 22px;
+}
+
+.swiper-slide.flip {
+  transition: transform 0.6s ease !important;
+  transform: rotateY(360deg) !important;
 }
